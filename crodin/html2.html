@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding e Doações</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span class="menu-icon" onclick="toggleSidebar()">&#9776;</span>
+            <h1>Crowdfunding e Doações</h1>
+        </div>
+    </header>
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="crowdfunding.html">Crowdfunding</a>
+    </div>
+    <main class="container" id="main-content">
+        <section id="crowdfunding">
+            <h2>Campanhas Atuais</h2>
+            <div id="campaigns-list">
+                <!-- As campanhas serão adicionadas aqui via JavaScript -->
+            </div>
+            <button class="btn" onclick="showCampaignForm()">Lançar Nova Campanha</button>
+        </section>
+        <section id="campaign-form" style="display: none;">
+            <h2>Lançar Nova Campanha</h2>
+            <form id="new-campaign-form">
+                <div class="form-group">
+                    <label for="campaign-title">Título da Campanha:</label>
+                    <input type="text" id="campaign-title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="campaign-description">Descrição:</label>
+                    <textarea id="campaign-description" name="description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="campaign-goal">Meta de Doação (R$):</label>
+                    <input type="number" id="campaign-goal" name="goal" required>
+                </div>
+                <button type="submit" class="btn">Lançar Campanha</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 App de Voluntariado. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

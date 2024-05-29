@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Voluntariado</title>
+    <link rel="stylesheet" href="sytle.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span class="menu-icon" onclick="toggleSidebar()">&#9776;</span>
+            <h1>Conecte-se e Faça a Diferença</h1>
+            <a href="crodin/html2.html" class="btn-header">Crowdfunding e Doações</a>
+            <a href="comunidade.html" class="btn-header">Apoio e Comunidade</a>
+        </div>
+    </header>
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+        <a href="#intro">Introdução</a>
+        <a href="#volunteer-form">Cadastre-se</a>
+        <a href="#opportunities">Oportunidades</a>
+        <a href="#profile">Perfil</a>
+        <a href="crowdfunding.html">Crowdfunding</a>
+        <a href="community.html">Apoio e Comunidade</a>
+    </div>
+    <main class="container" id="main-content">
+        <section id="intro">
+            <h2>Bem-vindo ao nosso App de Voluntariado!</h2>
+            <p>Encontre oportunidades de voluntariado que se alinhem com suas habilidades e interesses.</p>
+        </section>
+        <section id="volunteer-form">
+            <h2>Cadastre-se como Voluntário</h2>
+            <form id="form">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Habilidades:</label>
+                    <input type="text" id="skills" name="skills" required>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
+        <section id="opportunities">
+            <h2>Oportunidades de Voluntariado</h2>
+            <ul id="opportunity-list"></ul>
+        </section>
+        <section id="profile">
+            <h2>Meu Perfil</h2>
+            <form id="profile-form">
+                <div class="form-group">
+                    <label for="profile-pic">Foto de Perfil:</label>
+                    <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="profile-name">Nome:</label>
+                    <input type="text" id="profile-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="profile-email">Email:</label>
+                    <input type="email" id="profile-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="profile-bio">Biografia:</label>
+                    <textarea id="profile-bio" name="bio" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="profile-skills">Habilidades:</label>
+                    <input type="text" id="profile-skills" name="skills" required>
+                </div>
+                <div class="form-group">
+                    <label for="profile-interests">Interesses:</label>
+                    <input type="text" id="profile-interests" name="interests" required>
+                </div>
+                <button type="submit" class="btn">Salvar Perfil</button>
+            </form>
+            <h3>Avaliações e Feedback</h3>
+            <ul id="feedback-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 App de Voluntariado. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="js.js"></script>
+
+</body>
+</html>

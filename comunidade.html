@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoio e Comunidade</title>
+    <link rel="stylesheet" href="sytle.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span class="menu-icon" onclick="toggleSidebar()">&#9776;</span>
+            <h1>Apoio e Comunidade</h1>
+            <a href="index.html" class="btn-header">Página Principal</a>
+        </div>
+    </header>
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="crowdfunding.html">Crowdfunding</a>
+        <a href="community.html">Apoio e Comunidade</a>
+    </div>
+    <main class="container" id="main-content">
+        <section id="forum">
+            <h2>Fórum de Discussão</h2>
+            <div id="discussion-list">
+                <!-- Discussões serão adicionadas aqui via JavaScript -->
+            </div>
+            <button class="btn" onclick="showDiscussionForm()">Nova Discussão</button>
+        </section>
+        <section id="discussion-form" style="display: none;">
+            <h2>Iniciar Nova Discussão</h2>
+            <form id="new-discussion-form">
+                <div class="form-group">
+                    <label for="discussion-title">Título:</label>
+                    <input type="text" id="discussion-title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="discussion-content">Conteúdo:</label>
+                    <textarea id="discussion-content" name="content" required></textarea>
+                </div>
+                <button type="submit" class="btn">Publicar</button>
+            </form>
+        </section>
+        <section id="qna">
+            <h2>Q&A com Especialistas</h2>
+            <div id="qna-list">
+                <!-- Sessões de Q&A serão adicionadas aqui via JavaScript -->
+            </div>
+            <button class="btn" onclick="showQnaForm()">Nova Pergunta</button>
+        </section>
+        <section id="qna-form" style="display: none;">
+            <h2>Fazer uma Pergunta</h2>
+            <form id="new-qna-form">
+                <div class="form-group">
+                    <label for="qna-question">Pergunta:</label>
+                    <input type="text" id="qna-question" name="question" required>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
+        <!-- Exemplo simples de chat -->
+<section id="chat">
+    <h2>Chat</h2>
+    <div id="chat-box"></div>
+    <input type="text" id="chat-input" placeholder="Digite sua mensagem...">
+    <button onclick="sendMessage()">Enviar</button>
+</section>
+
+<script>
+function sendMessage() {
+    const input = document.getElementById('chat-input');
+    const message = input.value;
+    const chatBox = document.getElementById('chat-box');
+    
+    const messageElement = document.createElement('div');
+    messageElement.className = 'chat-message';
+    messageElement.textContent = message;
+    chatBox.appendChild(messageElement);
+    
+    input.value = '';
+}
+</script>
+
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 App de Voluntariado. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="scriipt.js"></script>
+</body>
+</html>
